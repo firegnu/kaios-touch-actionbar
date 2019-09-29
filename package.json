@@ -10,7 +10,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "yarn build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepublishOnly": "yarn lint",
     "preversion": "yarn lint",
     "postversion": "git push && git push --tags"
   },
@@ -39,5 +39,8 @@
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.1"
   }
 }
