@@ -2,8 +2,9 @@
   "name": "kaios-touch-actionbar",
   "version": "1.0.4",
   "description": "A nice greeter",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/kaios-touch-actionbar.js",
+  "module": "lib/kaios-touch-actionbar.js",
+  "types": "lib/kaios-touch-actionbar.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
