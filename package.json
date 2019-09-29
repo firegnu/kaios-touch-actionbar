@@ -1,6 +1,6 @@
 {
   "name": "kaios-touch-actionbar",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A nice greeter",
   "scripts": {
     "test": "jest --config jestconfig.json",
