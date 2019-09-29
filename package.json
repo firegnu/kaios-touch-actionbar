@@ -1,6 +1,6 @@
 {
   "name": "kaios-touch-actionbar",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A nice greeter",
   "main": "lib/kaios-touch-actionbar.js",
   "module": "lib/kaios-touch-actionbar.js",
