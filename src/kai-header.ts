@@ -2,12 +2,12 @@ import { LitElement, html, customElement, property, css } from 'lit-element';
 
 @customElement('kai-header')
 export class KaiHeader extends LitElement {
-    @property({ type: String }) mode = 'standard';
-    @property({ type: Number, attribute: false }) currentScrollTop = 0;
+  @property({ type: String }) mode = 'standard';
+  @property({ type: Number, attribute: false }) currentScrollTop = 0;
 
-    public static get styles() {
-        return [
-            css`
+  public static get styles() {
+    return [
+      css`
         :host {
           display: flex;
           flex-direction: row;
@@ -142,48 +142,48 @@ export class KaiHeader extends LitElement {
           pointer-events: none;
         }
       `,
-        ];
+    ];
+  }
+
+  scrollListener = (e) => {
+    const page = <Element>e.target;
+    if (this.mode === 'slidable') this.slide(page.scrollTop);
+    if (this.mode === 'shrinkable') this.shrink(page.scrollTop);
+  };
+
+  slide(scrollTop: number) {
+    if (scrollTop > this.currentScrollTop) {
+      !this.classList.contains('-slide-out') && this.classList.add('-slide-out');
+    } else {
+      this.classList.contains('-slide-out') && this.classList.remove('-slide-out');
+    }
+    this.currentScrollTop = scrollTop;
+  }
+
+  shrink(scrollTop: number) {
+    if (scrollTop > this.currentScrollTop) {
+      !this.classList.contains('-shrink') && this.classList.add('-shrink');
+    } else {
+      this.classList.contains('-shrink') && this.classList.remove('-shrink');
+    }
+    this.currentScrollTop = scrollTop;
+  }
+
+  firstUpdated() {
+    if (this.mode === 'slidable' || this.mode === 'shrinkable') {
+      const parent = this.parentNode as ShadowRoot;
+      parent.host.addEventListener('scroll', this.scrollListener);
     }
 
-    scrollListener = (e) => {
-        const page = <Element>e.target;
-        if (this.mode === 'slidable') this.slide(page.scrollTop);
-        if (this.mode === 'shrinkable') this.shrink(page.scrollTop);
-    };
-
-    slide(scrollTop: number) {
-        if (scrollTop > this.currentScrollTop) {
-            !this.classList.contains('-slide-out') && this.classList.add('-slide-out');
-        } else {
-            this.classList.contains('-slide-out') && this.classList.remove('-slide-out');
-        }
-        this.currentScrollTop = scrollTop;
+    if (this.mode === 'shrinkable') {
+      this.addEventListener('click', () => {
+        this.classList.contains('-shrink') && this.classList.remove('-shrink');
+      });
     }
+  }
 
-    shrink(scrollTop: number) {
-        if (scrollTop > this.currentScrollTop) {
-            !this.classList.contains('-shrink') && this.classList.add('-shrink');
-        } else {
-            this.classList.contains('-shrink') && this.classList.remove('-shrink');
-        }
-        this.currentScrollTop = scrollTop;
-    }
-
-    firstUpdated() {
-        if (this.mode === 'slidable' || this.mode === 'shrinkable') {
-            const parent = this.parentNode as ShadowRoot;
-            parent.host.addEventListener('scroll', this.scrollListener);
-        }
-
-        if (this.mode === 'shrinkable') {
-            this.addEventListener('click', () => {
-                this.classList.contains('-shrink') && this.classList.remove('-shrink');
-            });
-        }
-    }
-
-    render() {
-        return html`
+  render() {
+    return html`
       <div class="left"><slot name="left"></slot></div>
       <div class="content">
         <slot name="content"></slot>
@@ -191,5 +191,5 @@ export class KaiHeader extends LitElement {
       <div class="right"><slot name="right"></slot></div>
       <div class="right-icons"><slot name="right-icons"></slot></div>
     `;
-    }
+  }
 }

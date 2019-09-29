@@ -1,21 +1,15 @@
-import {
-    css,
-    customElement,
-    html,
-    LitElement,
-    property
-} from 'lit-element';
+import { LitElement, html, css, property, customElement } from 'lit-element';
 
 @customElement('kai-actionbar')
-export class KaiActionBar extends LitElement {
-    public render() {
-        return html`
+class KaiActionBar extends LitElement {
+  render() {
+    return html`
       <slot></slot>
     `;
-    }
+  }
 
-    static get styles() {
-        return css`
+  static get styles() {
+    return css`
       :host {
         position: sticky;
         bottom: 0;
@@ -51,5 +45,5 @@ export class KaiActionBar extends LitElement {
         }
       }
     `;
-    }
+  }
 }
