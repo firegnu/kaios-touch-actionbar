@@ -7,7 +7,7 @@ import {
 } from 'lit-element';
 
 @customElement('kai-actionbar')
-class KaiActionBar extends LitElement {
+export class KaiActionBar extends LitElement {
     public render() {
         return html`
       <slot></slot>
