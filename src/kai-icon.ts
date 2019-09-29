@@ -1,7 +1,7 @@
 import { css, customElement, html, LitElement, property } from 'lit-element';
 
 @customElement('kai-icon')
-class KaiIcon extends LitElement {
+export class KaiIcon extends LitElement {
   @property({ type: Number }) size = 24;
 
   static get styles() {

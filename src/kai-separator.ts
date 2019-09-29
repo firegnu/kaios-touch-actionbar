@@ -2,7 +2,7 @@ import { customElement, LitElement, css, html } from "lit-element";
 import './kai-text';
 
 @customElement('kai-separator')
-class KaiSeparator extends LitElement {
+export class KaiSeparator extends LitElement {
   static get styles() {
     return css`
       :host {
@@ -15,7 +15,7 @@ class KaiSeparator extends LitElement {
       }
     `;
   }
-  
+
   render() {
     return html`<kai-text as="h5"><slot></slot></kai-text>`;
   }

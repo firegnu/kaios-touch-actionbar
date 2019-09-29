@@ -4,7 +4,7 @@ import './kai-button';
 import './kai-input';
 
 @customElement('kai-prompt')
-class KaiPrompt extends KaiModal implements KaiPromptComponent {
+export class KaiPrompt extends KaiModal implements KaiPromptComponent {
   @property({ type: String, attribute: 'modal-title' }) modalTitle: string;
   @property({ type: String, attribute: 'cancel-label' }) cancelLabel: string;
   @property({ type: String, attribute: 'done-label' }) doneLabel: string;
@@ -42,7 +42,7 @@ class KaiPrompt extends KaiModal implements KaiPromptComponent {
     });
     this.dispatchEvent(inputEvent);
   }
-  
+
   render() {
     return html`
       <header class="modal-title">

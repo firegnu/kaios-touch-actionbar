@@ -2,7 +2,7 @@ import { customElement, LitElement, css, html } from 'lit-element';
 import './kai-text';
 
 @customElement('kai-loader')
-class KaiLoader extends LitElement {
+export class KaiLoader extends LitElement {
   static get styles() {
     return css`
       :host {

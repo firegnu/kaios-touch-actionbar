@@ -2,7 +2,7 @@ import { LitElement, html, property, customElement, css } from 'lit-element';
 import './kai-icon';
 
 @customElement('kai-checkbox')
-class KaiCheckbox extends LitElement {
+export class KaiCheckbox extends LitElement {
   @property({ type: Boolean, reflect: true }) checked = false;
   @property({ type: Boolean, reflect: true }) disabled = false;
   @property({ type: String, reflect: true }) value: string;

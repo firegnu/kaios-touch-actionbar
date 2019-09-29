@@ -3,7 +3,7 @@ import { customElement, html, property, css } from 'lit-element';
 import './kai-button';
 
 @customElement('kai-dialog')
-class KaiDialog extends KaiModal implements KaiModalInterface {
+export class KaiDialog extends KaiModal implements KaiModalInterface {
   @property({ type: String, attribute: 'modal-title' }) modalTitle: string;
   @property({ type: String, attribute: 'cancel-label' }) cancelLabel: string;
   @property({ type: String, attribute: 'done-label' }) doneLabel: string;

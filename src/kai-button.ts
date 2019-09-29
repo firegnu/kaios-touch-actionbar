@@ -3,7 +3,7 @@ import './kai-text';
 import './kai-icon';
 
 @customElement('kai-button')
-class KaiButton extends LitElement {
+export class KaiButton extends LitElement {
   @property({ type: String }) type = 'rounded';
   @property({ type: Boolean }) secondary = false;
   @property({ type: Boolean }) disabled = false;

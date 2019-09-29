@@ -1,7 +1,7 @@
 import { customElement, LitElement, property, css, html } from "lit-element";
 
 @customElement('kai-toggle')
-class KaiToggle extends LitElement {
+export class KaiToggle extends LitElement {
   @property({ type: Boolean, reflect: true }) checked = false;
   @property({ type: Boolean, reflect: true }) disabled = false;
 

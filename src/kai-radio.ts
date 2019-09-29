@@ -1,7 +1,7 @@
 import { customElement, LitElement, property, css, html } from 'lit-element';
 
 @customElement('kai-radio')
-class KaiRadio extends LitElement {
+export class KaiRadio extends LitElement {
   @property({ type: Boolean, reflect: true }) checked: boolean;
   @property({ type: Boolean, reflect: true }) disabled: boolean;
   @property({ type: String, reflect: true }) value: any;

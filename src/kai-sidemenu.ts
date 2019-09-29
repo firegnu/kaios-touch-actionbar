@@ -1,14 +1,14 @@
 import { LitElement, customElement, property, css, html } from 'lit-element';
 
 @customElement('kai-sidemenu')
-class KaiSidemenu extends LitElement {
+export class KaiSidemenu extends LitElement {
   @property({ type: Boolean }) open = false;
 
   constructor() {
     super();
     this.addEventListener('click', this.toggle);
   }
-  
+
   static get styles() {
     return css`
       :host {
@@ -59,7 +59,7 @@ class KaiSidemenu extends LitElement {
   toggle() {
     this.removeAttribute('open');
   }
-  
+
   render() {
     return html`<nav><slot></slot></nav>`;
   }

@@ -1,7 +1,7 @@
 import { customElement, LitElement, css, html, property } from 'lit-element';
 
 @customElement('kai-panel')
-class KaiPanel extends LitElement {
+export class KaiPanel extends LitElement {
   @property({ type: Number, attribute: false }) currentScrollTop = 0;
 
   static get styles() {

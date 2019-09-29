@@ -1,7 +1,7 @@
 import { customElement, LitElement, css, html, property } from 'lit-element';
 
 @customElement('kai-options')
-class KaiOptions extends LitElement {
+export class KaiOptions extends LitElement {
   @property({ type: Boolean }) open = false;
   @property({ type: Boolean }) openSubMenu = false;
   @property({ type: Object }) position: OptionsMenuPosition;

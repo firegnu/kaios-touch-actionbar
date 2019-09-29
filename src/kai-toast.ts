@@ -2,7 +2,7 @@ import { customElement, LitElement, property, css, html } from "lit-element";
 import './kai-text';
 
 @customElement('kai-toast')
-class KaiToast extends LitElement {
+export class KaiToast extends LitElement {
   @property({ type: Boolean, reflect: true, attribute: true }) show = false;
   @property({ type: Number, reflect: true, attribute: true }) duration = 3000;
 

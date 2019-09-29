@@ -3,7 +3,7 @@ import './kai-icon';
 import './kai-text';
 
 @customElement('kai-input')
-class KaiInput extends LitElement {
+export class KaiInput extends LitElement {
   @property({ type: String, reflect: true }) value = '';
   @property({ type: Number }) maxLength = 400;
   @property({ type: Boolean, reflect: false }) inFocus = false;

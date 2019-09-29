@@ -53,7 +53,7 @@ const fadeInKeyframes = [
 ];
 
 @customElement('app-router')
-class AppRouter extends LitElement {
+export class AppRouter extends LitElement {
   @property({ type: Object }) home: HistoryEntry;
   @property({ type: Boolean }) reverse = false;
   @property({ type: String }) exiting: string;

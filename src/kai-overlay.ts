@@ -1,7 +1,7 @@
 import { customElement, html, css, property, LitElement } from 'lit-element';
 
 @customElement('kai-overlay')
-class KaiOverlay extends LitElement {
+export class KaiOverlay extends LitElement {
   @property({ type: Boolean }) open = false;
 
   static get styles() {

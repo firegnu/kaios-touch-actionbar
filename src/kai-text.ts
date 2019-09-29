@@ -1,7 +1,7 @@
 import { LitElement, customElement, html, css, unsafeCSS, property } from 'lit-element';
 
 @customElement('kai-text')
-class KaiText extends LitElement {
+export class KaiText extends LitElement {
   @property({ type: String }) as: FontScale;
   @property({ type: String }) transform: TextTransform;
 

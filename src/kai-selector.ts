@@ -3,7 +3,7 @@ import { KaiModal } from './kai-modal';
 import './kai-button';
 
 @customElement('kai-selector')
-class KaiSelector extends KaiModal implements KaiSelectorComponent {
+export class KaiSelector extends KaiModal implements KaiSelectorComponent {
   @property({ type: String }) type: 'single' | 'multiple';
   @property({ type: String }) value: any;
   @property({ type: Array }) values = [];

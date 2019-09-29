@@ -2,7 +2,7 @@ import { customElement, LitElement, property, css, html } from 'lit-element';
 
 @customElement('kai-progress')
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-class KaiProgress extends LitElement {
+export class KaiProgress extends LitElement {
   @property({ type: String }) type = 'default';
 
   @property({ type: Number }) percentage?: number;

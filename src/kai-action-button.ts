@@ -1,7 +1,7 @@
 import { LitElement, html, css, property, customElement } from 'lit-element';
 
 @customElement('kai-action-button')
-class KaiActionButton extends LitElement {
+export class KaiActionButton extends LitElement {
   @property({ type: Boolean }) active;
 
   render() {
